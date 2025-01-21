@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer utilities {
+    .gradient-text {
+      @apply font-bold;
+      background: linear-gradient(0deg, #ffd700,#ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
