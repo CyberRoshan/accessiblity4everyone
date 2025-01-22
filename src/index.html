@@ -14,59 +14,76 @@
     <title>Document</title>
 </head>
 <body class="bg-white">
-    <!-- Navigation -->
-    <header class="container mx-auto px-8 py-8">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center">
-                <a href="#" class="text-xl font-bold">Accessibility<span class="text-gray-600">4Everyone</span></a>
-            </div>
-            
-            <div class="hidden md:flex items-center space-x-8">
-                <div class="relative group">
-                    <!-- <button class="flex items-center space-x-1">
-                        <span>Features</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button> -->
+    <header id="main-header" class="bg-white z-50 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold" aria-label="Accessibility4Everyone Home">Accessibility<span class="text-gray-600">4Everyone</span></a>
                 </div>
-                <a href="#" class="text-gray-600 text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">Home</a>
-                <a href="#" class="text-gray-600 text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">About</a>
-                <a href="#" class="text-gray-600 text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">Service</a>
-                <a href="#" class="text-gray-600 text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">Pricing</a>
-                <a href="#" class="text-gray-600 text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">Contact</a>
+                
+                <nav class="hidden md:flex items-center space-x-4 lg:space-x-8" aria-label="Main navigation">
+                    <a href="#" class="text-gray-600 text-lg lg:text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8" aria-current="page">Home</a>
+                    <a href="#" class="text-gray-600 text-lg lg:text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">About</a>
+                    <a href="#" class="text-gray-600 text-lg lg:text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">Service</a>
+                    <a href="#" class="text-gray-600 text-lg lg:text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">Pricing</a>
+                    <a href="#" class="text-gray-600 text-lg lg:text-2xl font-semibold tracking-widest hover:text-primary-yellow hover:underline hover:underline-offset-8">Contact</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:flex px-4 lg:px-6 py-2 lg:py-3 tracking-widest text-lg lg:text-2xl bg-primary-yellow text-black hover:bg-[#d4a018] rounded-md items-center transition duration-300 ease-in-out" aria-label="Book a Call">
+                        <i class="fa-solid fa-phone pe-2" aria-hidden="true"></i>
+                        Book a Call
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary-yellow focus:outline-none focus:ring-2 focus:ring-primary-yellow rounded-md" aria-expanded="false" aria-controls="mobile-menu">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            
-            <div class="flex items-center space-x-4">
-                <button class="px-6 py-3 tracking-widest text-2xl bg-primary-yellow text-black hover:bg-[#d4a018] rounded-md flex items-center">
-                    <i class="fa-solid fa-phone pe-2"></i>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white" aria-label="Mobile navigation">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary-yellow hover:bg-gray-50 rounded-md" aria-current="page">Home</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary-yellow hover:bg-gray-50 rounded-md">About</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary-yellow hover:bg-gray-50 rounded-md">Service</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary-yellow hover:bg-gray-50 rounded-md">Pricing</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary-yellow hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+            <div class="pt-4 px-3 pb-3 border-t border-gray-200">
+                <button class="w-full flex items-center justify-center px-4 py-2 text-base font-medium text-black bg-primary-yellow hover:bg-[#d4a018] rounded-md transition duration-300 ease-in-out" aria-label="Book a Call">
+                    <i class="fa-solid fa-phone pe-2" aria-hidden="true"></i>
                     Book a Call
                 </button>
             </div>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 py-6">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1.5/2 mb-8 md:mb-0">
-                <h1 class="text-5xl md:text-7xl font-bold tracking-wider leading-tight mb-6">
-                    Let's Build for <span class="gradient-text">Everyone</span>
-                </h1>
-                <h2 class="text-[30px] text-gray-600 tracking-widest mb-8">
-                    We believe being disable shouldn't stop anyone from digital experiences. 
-                </h2>
-                <div class="flex space-x-4">
-                    <button class="px-6 py-3 tracking-widest text-2xl bg-primary-yellow text-black hover:bg-[#d4a018] rounded-md flex items-center">
-                        <i class="fa-solid fa-phone pe-2"></i>
-                        Book a Call
-                    </button>
+    <main>
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-16 lg:py-2">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wider leading-tight mb-6">
+                        Let's Build for <span class="gradient-text">Everyone</span>
+                    </h1>
+                    <h2 class="text-xl sm:text-2xl lg:text-[30px] text-gray-600 tracking-widest mb-8">
+                        We believe being disabled shouldn't stop anyone from digital experiences.
+                    </h2>
+                    <div class="flex space-x-4">
+                        <button class="px-6 py-3 tracking-widest text-lg sm:text-xl lg:text-2xl bg-primary-yellow text-black hover:bg-[#d4a018] rounded-md flex items-center transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-yellow" aria-label="Book a Call">
+                            <i class="fa-solid fa-phone pe-2" aria-hidden="true"></i>
+                            Book a Call
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                    <img src="../assets/screen.jpg" alt="Illustration representing digital accessibility for everyone" class="max-w-full h-auto mx-auto">
                 </div>
             </div>
-            <div class="md:w-1/2">
-                <img src="https://img.freepik.com/premium-psd/mobile-phone-mockup-with-editable-design-changeable-colors_196070-196.jpg" alt="Astronaut illustration" class="w-full max-w-lg mx-auto">
-            </div>
-        </div>
-    </section>
+        </section>
     <section class="mx-auto px-4 py-16 max-w-6xl">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl tracking-wider lg:text-6xl font-bold mb-6">
@@ -199,5 +216,66 @@
             </div>
         </div>
     </section>
+</main>
+
+    <script>
+        // JavaScript for toggling the mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change the icon when the menu is opened/closed
+            const svg = mobileMenuButton.querySelector('svg');
+            if (expanded) {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            } else {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            }
+        });
+
+        // Close the mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                const svg = mobileMenuButton.querySelector('svg');
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            });
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Make header fixed on scroll
+        const header = document.getElementById('main-header');
+        const headerHeight = header.offsetHeight;
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > headerHeight) {
+                header.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'shadow-md');
+                document.body.style.paddingTop = `${headerHeight}px`;
+            } else {
+                header.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'shadow-md');
+                document.body.style.paddingTop = '0';
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 </html>
